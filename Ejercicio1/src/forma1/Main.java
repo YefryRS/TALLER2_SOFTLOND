@@ -3,6 +3,7 @@ package forma1;
 import java.util.ArrayList;
 import java.util.List;
 
+//NOTA: DECIDI HACERLO DE 2 MANERAS, PORQUE NO ENTENDI SI DESDE EL MAIN CREABA LOS OBJETOS O DIRECTAMENTE EN LA PRIMERA FUNCION DEBIA DE CREAR LOS ALUMNOS, QUE EN ESTE PACKAGE ESTA LA FORMA CREANDO LOS OBJETOS EN EL MAIN
 public class Main {
     //1. Registro de Alumnos: Crea una clase Alumno con propiedades como nombre, edad y calificaciones. Luego, crea una clase SistemaAlumnos que permite agregar alumnos,asignar calificaciones , calcular el promedio de sus calificaciones y mostrar la información de cada alumno.
 

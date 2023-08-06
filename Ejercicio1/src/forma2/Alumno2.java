@@ -1,18 +1,18 @@
-public class Alumno {
+package forma2;
 
+public class Alumno2 {
     private int id;
     private String nombre;
     private int edad;
     private double calificaciones;
 
-    public Alumno() {
+    public Alumno2() {
     }
 
-    public Alumno(int id, String nombre, int edad, double calificaciones) {
+    public Alumno2(int id, String nombre, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
-        this.calificaciones = calificaciones;
     }
 
     public String getNombre() {
@@ -40,7 +40,7 @@ public class Alumno {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -55,5 +55,4 @@ public class Alumno {
                 ", calificaciones=" + calificaciones +
                 '}';
     }
-
 }

@@ -1,23 +1,28 @@
+package forma2;
+
+import forma1.Alumno;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SistemaAlumnos {
-    private List<Alumno> alumnos = new ArrayList<>();
-    private Alumno alumno;
+public class SistemaAlumnos2 {
+    private List<Alumno2> alumnos = new ArrayList<>();
+    private Alumno2 alumno;
 
-    public List<Alumno> getAlumnos() {
+    public List<Alumno2> agregarAlumnos(int id,String nombre,int edad) {
+        Alumno2 alumnoGuardar = new Alumno2();
+        alumnoGuardar.setId(id);
+        alumnoGuardar.setNombre(nombre);
+        alumnoGuardar.setEdad(edad);
+
+        alumnos.add(alumnoGuardar);
         return alumnos;
     }
 
-    public List<Alumno> agregarAlumnos(Alumno alumno) {
-        alumnos.add(alumno);
-        return alumnos;
-    }
-
-    public Alumno asignarCalificaciones(int id,double calificacion) {
+    public Alumno2 asignarCalificaciones(int id,double calificacion) {
         int idAlumno;
 
-        for (Alumno item: alumnos) {
+        for (Alumno2 item: alumnos) {
             idAlumno = item.getId();
 
             if(idAlumno == id) {
@@ -31,7 +36,7 @@ public class SistemaAlumnos {
 
     public double calcularPromedioCalificaciones() {
         double promedio = 0;
-        for (Alumno item:alumnos) {
+        for (Alumno2 item:alumnos) {
             promedio+= item.getCalificaciones();
         }
         return promedio;
@@ -40,5 +45,4 @@ public class SistemaAlumnos {
     public String mostrarInformacionAlumno() {
         return alumnos.toString();
     }
-
 }
