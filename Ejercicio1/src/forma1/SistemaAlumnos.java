@@ -16,26 +16,28 @@ public class SistemaAlumnos {
         return alumnos;
     }
 
-    public Alumno asignarCalificaciones(int id,double calificacion) {
-        int idAlumno;
+    public void asignarCalificaciones(int id,double calificacion) {
 
         for (Alumno item: alumnos) {
-            idAlumno = item.getId();
 
-            if(idAlumno == id) {
-                item.setCalificaciones(calificacion);
-                alumno = item;
+            if(item.getId() == id) {
+                if(item.getCalificaciones() == null) {
+                    item.setCalificaciones(new ArrayList<>());
+                }
+                item.getCalificaciones().add(calificacion);
             }
 
         }
-        return alumno;
     }
 
-    public double calcularPromedioCalificaciones() {
-        double promedio = 0;
-        for (Alumno item:alumnos) {
-            promedio+= item.getCalificaciones();
+    public double calcularPromedioCalificaciones(Alumno alumno) {
+        double sumaCalificaciones = 0;
+        double promedio = sumaCalificaciones / alumno.getCalificaciones().size();
+
+        for (int i = 0; i < alumno.getCalificaciones().size(); i++) {
+            promedio+= alumno.getCalificaciones().get(i);
         }
+
         return promedio;
     }
 

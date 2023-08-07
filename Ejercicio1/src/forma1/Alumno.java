@@ -1,19 +1,20 @@
 package forma1;
 
+import java.util.List;
+
 public class Alumno {
     private int id;
     private String nombre;
     private int edad;
-    private double calificaciones;
+    List<Double> calificaciones;
 
     public Alumno() {
     }
 
-    public Alumno(int id, String nombre, int edad, double calificaciones) {
+    public Alumno(int id, String nombre, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
-        this.calificaciones = calificaciones;
     }
 
     public String getNombre() {
@@ -32,11 +33,11 @@ public class Alumno {
         this.edad = edad;
     }
 
-    public double getCalificaciones() {
+    public List<Double> getCalificaciones() {
         return calificaciones;
     }
 
-    public void setCalificaciones(double calificaciones) {
+    public void setCalificaciones(List<Double> calificaciones) {
         this.calificaciones = calificaciones;
     }
 
