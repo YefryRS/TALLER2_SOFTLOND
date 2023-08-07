@@ -22,11 +22,18 @@ public class Main {
         empleados.add(empleado4);
 
 
+        List<Empleado> empleados2 = new ArrayList<>();
+        Empleado trabajador1 = new Empleado(001,"Pedro","Hernandez");
+        Empleado trabajador2 = new Empleado(156,"Jackson","Martinez");
+        empleados.add(trabajador1);
+        empleados.add(trabajador2);
+
+
         Empresa empresa = new Empresa(1,"softlond",empleados);
+        Empresa empresa2 = new Empresa(2,"Mercadolibre",empleados2);
 
         //2. Creamos nuestro hotel y las habitaciones que posee
         List<Habitacion> habitaciones = new ArrayList<>();
-
         Habitacion habitacion1 = new Habitacion(1);
         Habitacion habitacion2 = new Habitacion(2);
         Habitacion habitacion3 = new Habitacion(3);
@@ -39,7 +46,21 @@ public class Main {
         habitaciones.add(habitacion5);
 
 
+        List<Habitacion> habitaciones2 = new ArrayList<>();
+        Habitacion cuarto1 = new Habitacion(1);
+        Habitacion cuarto2 = new Habitacion(2);
+        Habitacion cuarto3 = new Habitacion(3);
+        Habitacion cuarto4 = new Habitacion(4);
+        Habitacion cuarto5 = new Habitacion(5);
+        habitaciones2.add(cuarto1);
+        habitaciones2.add(cuarto2);
+        habitaciones2.add(cuarto3);
+        habitaciones2.add(cuarto4);
+        habitaciones2.add(cuarto5);
+
+
         Hotel hotel = new Hotel(1,"Hotel SAS",habitaciones);
+        Hotel hotel2 = new Hotel(2,"Bank",habitaciones2);
 
         //3. Implementaremos los metodos correspondientes
 
@@ -80,7 +101,7 @@ public class Main {
         System.out.println("Las habitaciones disponibles son: " + hotel.listaHabitaciones());
         System.out.println("--------------------------------------------");
 
-        //4. Mostrar toda la informacion, despues de la cancelacion
+        //4. Mostrar toda la informacion, despues de la cancelacion (Empresa 1)
         System.out.println("DESPUES DE CANCELAR ");
         System.out.println("Información de las reservas:");
         System.out.println("Hotel: " + hotel.getNombre());
@@ -95,7 +116,22 @@ public class Main {
             }
         }
 
-
+        //4. Mostrar toda la informacion, despues de la cancelacion (Empresa 2)
+        reserva.reservasHabitaciones(cuarto1,trabajador1);
+        reserva.reservasHabitaciones(cuarto2,trabajador2);
+        System.out.println("--------------------------------------------");
+        System.out.println("Información de las reservas:");
+        System.out.println("Hotel: " + hotel2.getNombre());
+        System.out.println("Empresa que reservo: " + empresa2.getEmpresa());
+        for (Habitacion habitacion : hotel2.getHabitaciones()) {
+            if (habitacion.getReservada()) {
+                System.out.println("Habitación " + habitacion.getNumeroHabitacion() + " - Ocupada por: " +
+                        habitacion.getEmpleado().getNombre() + " (Cédula: " +
+                        habitacion.getEmpleado().getCedula() + ")");
+            } else {
+                System.out.println("Habitación " + habitacion.getNumeroHabitacion() + " - Disponible");
+            }
+        }
 
     }
 }
