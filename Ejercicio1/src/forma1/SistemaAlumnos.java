@@ -32,12 +32,13 @@ public class SistemaAlumnos {
 
     public double calcularPromedioCalificaciones(Alumno alumno) {
         double sumaCalificaciones = 0;
-        double promedio = sumaCalificaciones / alumno.getCalificaciones().size();
+        int total = alumno.getCalificaciones().size();
 
         for (int i = 0; i < alumno.getCalificaciones().size(); i++) {
-            promedio+= alumno.getCalificaciones().get(i);
+            sumaCalificaciones+= alumno.getCalificaciones().get(i);
         }
 
+        double promedio = sumaCalificaciones / total;
         return promedio;
     }
 
