@@ -76,10 +76,12 @@ public class Main {
         //Cancelar reservas
         reserva.cancelarReservas(habitacion1);
 
+        System.out.println("-----------------------------------------------");
+        System.out.println("Las habitaciones disponibles son: " + hotel.listaHabitaciones());
+        System.out.println("--------------------------------------------");
 
         //4. Mostrar toda la informacion, despues de la cancelacion
-
-        System.out.println("--------- DESPUES DE CANCELAR ---------------------");
+        System.out.println("DESPUES DE CANCELAR ");
         System.out.println("Información de las reservas:");
         System.out.println("Hotel: " + hotel.getNombre());
         System.out.println("Empresa que reservo: " + empresa.getEmpresa());
