@@ -1,7 +1,5 @@
 package forma2;
 
-import forma1.Alumno;
-
 import java.util.ArrayList;
 import java.util.List;
 

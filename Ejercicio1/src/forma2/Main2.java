@@ -1,7 +1,5 @@
 package forma2;
 
-import forma1.Alumno;
-import forma1.SistemaAlumnos;
 
 //NOTA: EN ESTE PACKAGE ESTA LA FORMA CREANDO LOS OBJETOS DESDE LA CLASE SISTEMA_ALUMNOS
 public class Main2 {
