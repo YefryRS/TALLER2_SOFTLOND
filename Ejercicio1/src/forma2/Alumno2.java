@@ -1,10 +1,12 @@
 package forma2;
 
+import java.util.List;
+
 public class Alumno2 {
     private int id;
     private String nombre;
     private int edad;
-    private double calificaciones;
+    List<Double> calificaciones;
 
     public Alumno2() {
     }
@@ -31,11 +33,11 @@ public class Alumno2 {
         this.edad = edad;
     }
 
-    public double getCalificaciones() {
+    public List<Double> getCalificaciones() {
         return calificaciones;
     }
 
-    public void setCalificaciones(double calificaciones) {
+    public void setCalificaciones(List<Double> calificaciones) {
         this.calificaciones = calificaciones;
     }
 

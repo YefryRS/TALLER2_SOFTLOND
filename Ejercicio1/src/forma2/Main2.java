@@ -1,6 +1,8 @@
 package forma2;
 
 
+import java.util.List;
+
 //NOTA: EN ESTE PACKAGE ESTA LA FORMA CREANDO LOS OBJETOS DESDE LA CLASE SISTEMA_ALUMNOS
 public class Main2 {
     //1. Registro de Alumnos: Crea una clase Alumno con propiedades como nombre, edad y calificaciones. Luego, crea una clase SistemaAlumnos que permite agregar alumnos,asignar calificaciones , calcular el promedio de sus calificaciones y mostrar la información de cada alumno.
@@ -17,17 +19,18 @@ public class Main2 {
         sistemaAlumnos.agregarAlumnos(4,"Esther",19);
         sistemaAlumnos.agregarAlumnos(5,"Jesus",35);
 
-        System.out.println("----------------------------------------------");
-
         //2. Asignar calificaciones
-        System.out.println(sistemaAlumnos.asignarCalificaciones(1,4.3));
-        System.out.println(sistemaAlumnos.asignarCalificaciones(2,4.7));
-        System.out.println(sistemaAlumnos.asignarCalificaciones(5,3.6));
+        sistemaAlumnos.asignarCalificaciones(1,4.3);
+        sistemaAlumnos.asignarCalificaciones(1,4.7);
+        sistemaAlumnos.asignarCalificaciones(1,3.6);
+        sistemaAlumnos.asignarCalificaciones(2,3.0);
+        sistemaAlumnos.asignarCalificaciones(2,3.0);
+        sistemaAlumnos.asignarCalificaciones(2,3.0);
 
-        System.out.println("----------------------------------------------");
 
         //3. Calcular promedio de calificaciones
-        System.out.println(sistemaAlumnos.calcularPromedioCalificaciones());
+        System.out.println(sistemaAlumnos.calcularPromedioCalificaciones(1));
+        System.out.println(sistemaAlumnos.calcularPromedioCalificaciones(2));
 
         System.out.println("----------------------------------------------");
 
