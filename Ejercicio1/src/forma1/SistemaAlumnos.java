@@ -5,7 +5,6 @@ import java.util.List;
 
 public class SistemaAlumnos {
     private List<Alumno> alumnos = new ArrayList<>();
-    private Alumno alumno;
 
     public List<Alumno> getAlumnos() {
         return alumnos;
