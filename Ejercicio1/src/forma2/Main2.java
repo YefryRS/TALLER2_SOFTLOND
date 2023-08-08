@@ -1,7 +1,6 @@
 package forma2;
 
 
-import java.util.List;
 
 //NOTA: EN ESTE PACKAGE ESTA LA FORMA CREANDO LOS OBJETOS DESDE LA CLASE SISTEMA_ALUMNOS
 public class Main2 {

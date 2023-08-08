@@ -1,13 +1,11 @@
 package forma2;
 
-import forma1.Alumno;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SistemaAlumnos2 {
     private List<Alumno2> alumnos = new ArrayList<>();
-    private Alumno2 alumno;
 
     public List<Alumno2> getAlumnos() {
         return alumnos;
