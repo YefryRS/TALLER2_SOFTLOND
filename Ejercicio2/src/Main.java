@@ -5,18 +5,7 @@ public class Main {
 
     //NOTA: PARA ESTE EJERCICIO DECIDI TOMAR LA TASA DE CAMBIO DEL DIA 07 DE AGOSTO DEL PRESENTE AÑO(07/08/2023)
     public static void main(String[] args) {
-       // Instanciamos la clase
         ConversorMonedas conversorMonedas = new ConversorMonedas();
-
-        /* //1. Convertir dólares a euros
-        double dolaresAEuros = conversorMonedas.convertirDolaresAEuros(500);
-
-        //2. Convertir Pesos a dolares
-        String pesosADolares = conversorMonedas.convertirPesosADolares(1500000);
-        System.out.println("dolares a pesos colombianos: " + conversorMonedas.convertirDolaresAPesos(100));
-
-        System.out.println("dolares a euros: " + dolaresAEuros);
-        System.out.println("pesos colombianos a dolares " + pesosADolares); */
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escribe el tipo de moneda que deseas hacerla la conversion(COP, MXN, USD, EUR)");
