@@ -25,8 +25,8 @@ public class Main {
         List<Empleado> empleados2 = new ArrayList<>();
         Empleado trabajador1 = new Empleado(001,"Pedro","Hernandez");
         Empleado trabajador2 = new Empleado(156,"Jackson","Martinez");
-        empleados.add(trabajador1);
-        empleados.add(trabajador2);
+        empleados2.add(trabajador1);
+        empleados2.add(trabajador2);
 
 
         Empresa empresa = new Empresa(1,"softlond",empleados);
